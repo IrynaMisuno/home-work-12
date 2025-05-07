@@ -1,0 +1,91 @@
+body{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    min-width: 80vw;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+.circle{
+    fill:rgb(84, 222, 222);
+    stroke-width: 2px;
+    stroke: rgb(255, 255, 255);
+}
+.square{
+    fill:rgb(102, 102, 206);
+    stroke-width: 2px;
+    stroke:rgb(168, 176, 226);
+}
+
+.ellipse{
+stroke:rgb(236, 128, 202);
+stroke-width: 5px;
+fill:rgb(181, 126, 209);
+}
+
+.rect{
+    fill: rosybrown;
+    stroke-width: 2px;
+    stroke:rgb(246, 204, 204); 
+}
+ 
+.circle{
+    animation: appear .8s forwards;
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+        scale: 0;
+    }
+    100%{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.ellipse{
+    animation: stroke 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes stroke{
+    0%{
+        stroke-width: 0px;
+
+    }
+    50%{
+        stroke-width: 5px;
+    }
+
+    100%{
+        stroke-width: 0px;
+
+    }
+}
+
+.square{
+    animation: color 5s;
+    animation-iteration-count: 3;
+}
+@keyframes color {
+    0%   {fill:red;}
+    25%  {fill:yellow;}
+    50%  {fill:blue;}
+    75%  {fill:green;}
+    100% {fill:red;}
+  }
+
+  .rect{
+    animation-name: opacity;
+    animation-duration: 8s;
+    animation-iteration-count: 3;
+    transform-origin: 0 0;
+  }
+
+  @keyframes opacity {
+    0%   {opacity: 0;}
+    25%  {opacity: .25;}
+    50%  {opacity: .5;}
+    75%  {opacity: .75;}
+    100% {opacity: 1;}
+  }
